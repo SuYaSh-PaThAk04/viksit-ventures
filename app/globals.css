@@ -753,17 +753,23 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .hero { --hero-shift: 40px; }
-
-  .hero::before { background-position: 82% center; }
-
-  .hero::after {
-    background: linear-gradient(180deg, rgba(5, 8, 12, 0.62) 0%, rgba(5, 8, 12, 0.4) 46%, rgba(5, 8, 12, 0.7) 100%);
+  .hero {
+    --hero-shift: 0px;
+    min-height: 0;
   }
 
-  .hero-grid { padding-bottom: 96px; min-height: auto; }
+  .hero::before { display: none; }
 
-  .sheet { padding: 28px 20px 0; margin-top: -56px; }
+  .hero::after { display: none; }
+
+  .hero-grid {
+    min-height: 0;
+    align-items: start;
+    padding-top: calc(var(--nav) + 28px);
+    padding-bottom: 48px;
+  }
+
+  .sheet { padding: 28px 20px 0; margin-top: 8px; }
 
   .stats { margin-left: -20px; margin-right: -20px; }
 
