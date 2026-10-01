@@ -49,20 +49,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section" id="plan">
-        <p className="eyebrow">The game plan</p>
-        <h2>A year-based plan, one direction.</h2>
-        <ol className="path">
-          {plan.map((step) => (
-            <li className="step" key={step.when}>
-              <span>{step.when}</span>
-              <h3>{step.title}</h3>
-              <p>{step.detail}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
       <section className="section" id="founders">
         <p className="eyebrow">Founders</p>
         <h2>4 years building together.</h2>
